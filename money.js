@@ -3,11 +3,14 @@ const fromInput = document.querySelector('[name="from_amount"]');
 const toSelect = document.querySelector('[name="to_currency"]');
 const toEl = document.querySelector('.to_amount');
 const form = document.querySelector('.app form');
-const endpoint = 'https://v6.exchangerate-api.com/v6/4e177d8a2c4ff2bea51098be/latest';
+var mykey = config.MY_KEY;
+const endpoint = 'https://api.exchangeratesapi.io/v1/latest?access_key=' + mykey;
 const ratesByBase = {};
+
 
 const currencies = {
   GBP: 'British Pound Sterling',
+  VND: 'Vietnamese Dong',
 };
 
 function generateOptions(options) {
@@ -20,7 +23,7 @@ function generateOptions(options) {
 }
 
 async function fetchRates(base = 'GBP') {
-  const res = await fetch(`${endpoint}/${base}`);
+  const res = await fetch(`${endpoint}&base=${base}`);
   const rates = await res.json();
   return rates;
 }
