@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+html {
+    display: table;
+    margin: auto;
+}
+form{
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+}
