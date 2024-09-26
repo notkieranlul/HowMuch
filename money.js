@@ -10,8 +10,11 @@ const ratesByBase = {};
 
 const currencies = {
   GBP: 'British Pound Sterling',
-  VND: 'Vietnamese Dong',
 };
+
+const currencies1 = {
+    VND: 'Vietnamese Dong',
+  };
 
 function generateOptions(options) {
   return Object.entries(options)
@@ -64,6 +67,9 @@ async function handleInput(e) {
 const optionsHTML = generateOptions(currencies);
 // populate the options elements
 fromSelect.innerHTML = optionsHTML;
-toSelect.innerHTML = optionsHTML;
+
+const optionsHTML1 = generateOptions(currencies1);
+// populate the options elements
+toSelect.innerHTML = optionsHTML1;
 
 form.addEventListener('input', handleInput);

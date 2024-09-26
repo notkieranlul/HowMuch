@@ -15,3 +15,6 @@ form{
     font-family: 'Montserrat', sans-serif;
     display: inline-block;
 }
+select{
+  display: none;
+}
