@@ -77,3 +77,4 @@ const optionsHTML1 = generateOptions(currencies1);
 toSelect.innerHTML = optionsHTML1;
 
 form.addEventListener('input', handleInput);
+
