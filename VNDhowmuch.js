@@ -1,5 +1,5 @@
 const fromSelect = document.querySelector('[name="from_currency"]');
-const fromInput = document.querySelector('[name="from_amount"]');
+const fromInput = document.getElementById('from_amount');
 const toSelect = document.querySelector('[name="to_currency"]');
 const toEl = document.querySelector('.to_amount');
 const form = document.querySelector('.app form');
@@ -77,4 +77,3 @@ const optionsHTML1 = generateOptions(currencies1);
 toSelect.innerHTML = optionsHTML1;
 
 form.addEventListener('input', handleInput);
-

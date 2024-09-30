@@ -14,7 +14,7 @@
   <h3>edition</h3>
   <div class="app">
     <form>
-      <input type="number" name="from_amount" placeholder="£">
+      <input type="number" id="from_amount" placeholder="£">
       <select name="from_currency">
         <option>GBP</option>
       </select>
@@ -25,9 +25,11 @@
       <p class="to_amount">₫0</p>
     </form>
   </div>
+  <p id="target-text"></p>
 
-  <script src='config.js'></script>
+  <script src='./config.js'></script>
   <script src="./VNDhowmuch.js"></script>
+  <script src="./VNDphocounter.js"></script>
 </body>
 
 </html>
