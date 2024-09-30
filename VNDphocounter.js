@@ -18,7 +18,7 @@ function checkInputValue() {
         for (let i = 0; i < inputValue; i++) {
         // create a new image element
         const img = document.createElement("img");
-        img.src = "./pho.jpg" + (i + 1);
+        img.src = "https://static.vecteezy.com/system/resources/previews/012/596/986/original/pho-food-illustration-from-vietnam-vector.jpg";
         img. width = 50;
         img.style.margin = "5px";
         
