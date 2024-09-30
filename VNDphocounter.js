@@ -7,22 +7,25 @@ inputField.addEventListener("input", checkInputValue);
 function checkInputValue() {
     // Get the current value of the input field
     const inputValue = inputField.value;
+    // get the image container
     const phoImage = document.getElementById("pho-counter");
 
+    // clear any exsiting images
     phoImage.innerHTML = '';
 
-    // Check if the value is greater than 10
-    if (inputValue >= 10) {
-        // Update the text if the value is greater than 10
+    // Check if the value is greater or equal to 10
+    if (inputValue >= 1 && inputValue <= 5) {
+        for (let i = 0; i < inputValue; i++) {
+        // create a new image element
         const img = document.createElement("img");
-        img.src = "https://t4.ftcdn.net/jpg/05/45/47/21/360_F_545472143_yPWPWqfbvvySoRfmzH6GJmCkQDPgMNHc.jpg";
+        img.src = "./pho.jpg" + (i + 1);
         img. width = 50;
-    phoImage.appendChild(img);
-    } else {
-        // Update the text if the value is 10 or less
-        const img = document.createElement("img");
-        img.src = "";
-        img. width = 10;
+        img.style.margin = "5px";
+        
+        // add the image to the container
         phoImage.appendChild(img);
+    }} else {
+        // create a new image element
+        phoImage.textContent = "unlimited pho"
     }
 }
