@@ -21,10 +21,11 @@ function checkInputValue() {
         img.src = "https://static.vecteezy.com/system/resources/previews/012/596/986/original/pho-food-illustration-from-vietnam-vector.jpg";
         img. width = 50;
         img.style.margin = "5px";
-        
         // add the image to the container
         phoImage.appendChild(img);
-    }} else {
+    }} else if (inputValue == 0) {
+        phoImage.textContent = ""
+    } else {
         // create a new image element
         phoImage.textContent = "unlimited pho"
     }
